@@ -1,0 +1,35 @@
+{
+  "name": "codecrush",
+  "version": "1.0.0",
+  "description": "CodeCrush is an application useful for developers to communicate with other developers",
+  "scripts": {
+    "dev": "dotenvx run -- tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "dotenvx run -- node dist/index.js",
+    "migrations:gen": "tsc && drizzle-kit generate",
+    "migrations:apply": "dotenvx run -- drizzle-kit migrate"
+  },
+  "keywords": [],
+  "author": "Naveen",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.61.0",
+    "@praha/byethrow": "^0.11.1",
+    "drizzle-orm": "^0.45.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0",
+    "ts-pattern": "^5.9.0",
+    "typescript": "^6.0.2",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "@types/pg": "^8.20.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0"
+  }
+}

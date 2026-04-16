@@ -1,0 +1,2 @@
+export const USER_CREATED = "User created successfully";
+export const USER_LOGGED_IN = "User logged in successfully";
