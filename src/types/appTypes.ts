@@ -1,4 +1,5 @@
 import type {
+    BadRequestException,
     ConflictException,
     InternalServerExceptions,
     NotFoundExceptions,
@@ -13,7 +14,8 @@ export type Errors =
     | NotFoundExceptions
     | UnProcessEntityExceptions
     | ConflictException
-    | UnAuthorizedException;
+    | UnAuthorizedException
+    | BadRequestException
 
 export interface JwtPayload {
     sub : string

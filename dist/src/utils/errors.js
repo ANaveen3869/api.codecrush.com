@@ -34,5 +34,8 @@ export function errorResponse(res, errors) {
         .with({ statusCode: 401 }, () => {
         return sendErrorResponse(res, 401, errors.message);
     })
+        .with({ statusCode: 400 }, () => {
+        return sendErrorResponse(res, 400, errors.message);
+    })
         .exhaustive();
 }

@@ -10,8 +10,8 @@ export const vCreateUser = z.object({
 })
 
 export const vUpdateUser = z.object({
-    name: z.string().nullish(),
-    email: z.string().nullish(),
+    name: z.string(),
+    email: z.string(),
     phone: z.string().nullish(),
     address: z.string().nullish(),
 })
