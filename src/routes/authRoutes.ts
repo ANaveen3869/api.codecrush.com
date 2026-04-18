@@ -6,7 +6,9 @@ const authRoutes = express.Router();
 const authControllers = new AuthControllers();
 
 authRoutes.post("/sign-up" ,  authControllers.createUserHandlers)
-authRoutes.post("/sign-in" , isAuthenticated ,authControllers.getUserByEmailHandlers)
+authRoutes.post("/sign-in" ,  authControllers.getUserByEmailHandlers)
+
+authRoutes.post("/refresh-token" , isAuthenticated , authControllers.getTokensHandlers)
 
 
 export default authRoutes;

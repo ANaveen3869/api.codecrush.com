@@ -8,6 +8,6 @@ export async function isAuthenticated(req: Request, res: Response , next : NextF
     if (Result.isFailure(result)) {
         return errorResponse(res , result.error); 
     }
-    // req.user = result.value;
-    next();
+    req.user = result.value;
+    return next();
 }

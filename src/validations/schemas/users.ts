@@ -22,7 +22,7 @@ export const vLoginWithOtp = z.object({
 });
 
 export const vRefreshToken = z.object({
-    refreshToken: z.string(),
+    refresh_token: z.string(),
 });
 
 

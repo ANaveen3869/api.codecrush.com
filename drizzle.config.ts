@@ -4,7 +4,7 @@ import fs from "fs";
 
 export default defineConfig({
     dialect: "postgresql",
-    schema: "./dist/database/schemas/*",
+    schema: "./dist/src/database/schemas/*",
     out: "migrations",
     dbCredentials: {
         url: process.env.DB_URL!,

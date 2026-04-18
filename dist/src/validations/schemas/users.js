@@ -18,5 +18,5 @@ export const vLoginWithOtp = z.object({
     otp: z.string().min(4).max(8),
 });
 export const vRefreshToken = z.object({
-    refreshToken: z.string(),
+    refresh_token: z.string(),
 });

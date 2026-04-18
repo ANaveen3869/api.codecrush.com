@@ -6,6 +6,6 @@ export async function isAuthenticated(req, res, next) {
     if (Result.isFailure(result)) {
         return errorResponse(res, result.error);
     }
-    // req.user = result.value;
-    next();
+    req.user = result.value;
+    return next();
 }
